@@ -2,33 +2,39 @@ package ru.Alex.Vil.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.Alex.Vil.services.interfaces.UserInterface;
+import ru.Alex.Vil.models.User;
+import ru.Alex.Vil.services.UserService;
 
 @RestController
-@RequestMapping("/w")
+@RequestMapping("/user")
 
 public class UserController {
 
+
     @Autowired
-    UserInterface userInterface;
+    UserService userService;
 
     @GetMapping
-    Integer get() {
-        return userInterface.getUser(5, 10);
+    public Iterable<User> getUsers() {
+
+        return userService.getAllUsers();
     }
+
     @PostMapping
-    Integer post(){
-        return userInterface.postUser(100,90);
+    public User post(User user) {
+        return userService.postUser(user);
 
 
     }
+
     @PutMapping
-    String put(){
-        return userInterface.putUser("добрый","день");
+    public User put(User user) {
+        return userService.putUser(user);
     }
+
     @DeleteMapping
-    String del(){
-        return userInterface.delUser();
+    public String delCar(@RequestParam(name = "id") Integer id) {
+        return userService.delUser(id);
     }
 
 
