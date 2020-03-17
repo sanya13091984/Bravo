@@ -1,30 +1,15 @@
 package ru.Alex.Vil.services;
 
-import org.springframework.stereotype.Service;
-import ru.Alex.Vil.services.interfaces.UserInterface;
+import ru.Alex.Vil.models.User;
 
-@Service
+public interface UserService {
 
-public class   UserService implements UserInterface {           //добрый день страна
+     Iterable<User> getAllUsers();
 
+    User postUser(User user);
 
-    @Override
-    public Integer getUser(int x, int y) {
-        return x*y;
-    }
+    User putUser(User user);
 
-    @Override
-    public Integer postUser(int x, int y) {
-        return x+y;
-    }
+    String delUser(Integer id);
 
-    @Override
-    public String putUser(String x, String y) {
-        return x+" "+y;
-    }
-
-    @Override
-    public String delUser() {
-        return "просто del";
-    }
 }
