@@ -4,7 +4,7 @@ import ru.Alex.Vil.models.User;
 
 public interface UserService {
 
-     Iterable<User> getAllUsers();
+    Iterable<User> getAllUsers();
 
     User postUser(User user);
 

@@ -1,13 +1,12 @@
 package ru.Alex.Vil.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.*;
 import ru.Alex.Vil.models.User;
 import ru.Alex.Vil.services.UserService;
 
 @RestController
-@RequestMapping("/u")
+@RequestMapping("/user")
 
 public class UserController {
 
@@ -16,23 +15,25 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    public  Iterable<User> getUsers() {
+    public Iterable<User> getUsers() {
 
         return userService.getAllUsers();
     }
+
     @PostMapping
-    User post(User user){
+    public User post(User user) {
         return userService.postUser(user);
 
 
     }
+
     @PutMapping
-    User put(User user) {
+    public User put(User user) {
         return userService.putUser(user);
     }
 
-        @DeleteMapping
-    public String delCar(@RequestParam(name = "id") Integer id){
+    @DeleteMapping
+    public String delCar(@RequestParam(name = "id") Integer id) {
         return userService.delUser(id);
     }
 
