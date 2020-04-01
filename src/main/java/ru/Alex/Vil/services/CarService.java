@@ -2,10 +2,9 @@ package ru.Alex.Vil.services;
 
 import ru.Alex.Vil.models.Car;
 
-
 public interface CarService {
 
-    Iterable<Car> getAllCars();
+    Iterable<Car> getCars();
 
     Car postCar(Car car);
 

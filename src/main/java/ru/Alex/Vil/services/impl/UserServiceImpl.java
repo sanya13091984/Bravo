@@ -6,6 +6,8 @@ import ru.Alex.Vil.models.User;
 import ru.Alex.Vil.repository.UserRepository;
 import ru.Alex.Vil.services.UserService;
 
+import java.util.List;
+
 @Service
 
 public class UserServiceImpl implements UserService {
@@ -34,6 +36,16 @@ public class UserServiceImpl implements UserService {
     public String delUser(Integer id) {
         userRepository.deleteById(id);
         return "udalil user" + id;
+    }
+
+    @Override
+    public List<User> getSql() {
+        return userRepository.prmSql();
+    }
+
+    @Override
+    public void voidSql() {
+    userRepository.sqlUpdata();
     }
 
 

@@ -7,7 +7,7 @@ import ru.Alex.Vil.services.CarService;
 
 
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/cars")
 
 
 public class CarController {
@@ -18,7 +18,7 @@ public class CarController {
 
     @GetMapping
     public Iterable<Car> getCar() {
-        return carService.getAllCars();
+        return carService.getCars();
 
     }
 

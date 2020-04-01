@@ -1,6 +1,5 @@
 package ru.Alex.Vil.services.impl;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.Alex.Vil.models.Car;
@@ -14,7 +13,7 @@ public class CarServiceImpl implements CarService {
     CarRepository carRepository;
 
     @Override
-    public Iterable<Car> getAllCars() {
+    public Iterable<Car> getCars() {
         return carRepository.findAll();
     }
 

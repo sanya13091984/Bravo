@@ -5,8 +5,11 @@ import org.springframework.web.bind.annotation.*;
 import ru.Alex.Vil.models.User;
 import ru.Alex.Vil.services.UserService;
 
+import java.util.List;
+
+
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 
 public class UserController {
 
@@ -18,6 +21,16 @@ public class UserController {
     public Iterable<User> getUsers() {
 
         return userService.getAllUsers();
+    }
+
+    @GetMapping("/sql")
+    public List<User> primer(){
+      return userService.getSql();
+    }
+
+    @GetMapping("/sqlu")
+    public void sila(){
+        userService.voidSql();
     }
 
     @PostMapping
