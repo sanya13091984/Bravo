@@ -7,12 +7,10 @@ import ru.Alex.Vil.services.UserService;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/users")
 
 public class UserController {
-
 
     @Autowired
     UserService userService;
@@ -24,19 +22,18 @@ public class UserController {
     }
 
     @GetMapping("/sql")
-    public List<User> primer(){
-      return userService.getSql();
+    public List<User> primer() {
+        return userService.getSql();
     }
 
     @GetMapping("/sqlu")
-    public void sila(){
+    public void sila() {
         userService.voidSql();
     }
 
     @PostMapping
     public User post(User user) {
         return userService.postUser(user);
-
 
     }
 
@@ -49,6 +46,5 @@ public class UserController {
     public String delCar(@RequestParam(name = "id") Integer id) {
         return userService.delUser(id);
     }
-
 
 }

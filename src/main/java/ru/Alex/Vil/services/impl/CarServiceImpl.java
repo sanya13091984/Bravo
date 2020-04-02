@@ -6,6 +6,8 @@ import ru.Alex.Vil.models.Car;
 import ru.Alex.Vil.repository.CarRepository;
 import ru.Alex.Vil.services.CarService;
 
+import java.util.List;
+
 @Service
 public class CarServiceImpl implements CarService {
 
@@ -33,6 +35,12 @@ public class CarServiceImpl implements CarService {
         carRepository.deleteById(id);
         return "delete user №" + id;
 
-
     }
+
+    @Override
+    public List<Car> getCar(String marka) {
+        return carRepository.carSql(marka);
+    }
+
+
 }

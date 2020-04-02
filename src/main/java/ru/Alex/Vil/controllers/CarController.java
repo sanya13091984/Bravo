@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.*;
 import ru.Alex.Vil.models.Car;
 import ru.Alex.Vil.services.CarService;
 
+import java.util.List;
 
 @RestController
 @RequestMapping("/cars")
-
 
 public class CarController {
 
@@ -20,6 +20,12 @@ public class CarController {
     public Iterable<Car> getCar() {
         return carService.getCars();
 
+    }
+
+    @GetMapping("/sql5")
+    public List<Car> primer(@RequestParam(name = "markaBrowser") String marka) {
+
+        return carService.getCar(marka);
     }
 
     @PostMapping

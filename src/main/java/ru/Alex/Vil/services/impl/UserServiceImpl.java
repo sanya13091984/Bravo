@@ -26,7 +26,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-
     @Override
     public User putUser(User user) {
         return userRepository.save(user);
@@ -45,8 +44,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void voidSql() {
-    userRepository.sqlUpdata();
+        userRepository.sqlUpdata();
     }
-
 
 }
