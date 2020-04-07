@@ -7,10 +7,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Getter
 @Setter
-
 @Entity
 @Table(name = "a_user")
 @AllArgsConstructor
@@ -24,8 +22,6 @@ public class User {
 
     @Column(name = "name")
     private String name;
-
-
 
     @Column(name = "pass")
     private Integer pass;

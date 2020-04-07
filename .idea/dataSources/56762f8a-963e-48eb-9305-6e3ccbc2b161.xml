@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+    <root id="1">
+      <ServerVersion>9.4.26</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12135</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>673</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>821</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|16438|16440|1
+sequence|table|16451|16453|1
+sequence|table|16463|16465|1
+sequence|table|16487|16489|1
+</Relations>
+    </database>
+    <role id="3" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <Replication>1</Replication>
+    </role>
+    <schema id="4" parent="2" name="information_schema">
+      <ObjectId>11585</ObjectId>
+      <StateNumber>564</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="5" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>561</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11320</ObjectId>
+      <StateNumber>23</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="8" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11321</ObjectId>
+      <StateNumber>23</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="9" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>562</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>822</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="10" parent="2" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+    </access-method>
+    <access-method id="11" parent="2" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+    </access-method>
+    <access-method id="12" parent="2" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+    </access-method>
+    <access-method id="13" parent="2" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+    </access-method>
+    <access-method id="14" parent="2" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+    </access-method>
+    <extension id="15" parent="2" name="adminpack">
+      <ObjectId>16384</ObjectId>
+      <Comment>administrative functions for PostgreSQL</Comment>
+      <StateNumber>675</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <extension id="16" parent="2" name="plpgsql">
+      <ObjectId>11855</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>567</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="17" parent="9" name="a_car2_id_seq">
+      <ObjectId>16487</ObjectId>
+      <StateNumber>789</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="9" name="a_user2_id_seq">
+      <ObjectId>16463</ObjectId>
+      <StateNumber>765</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="9" name="a_user_id_seq">
+      <ObjectId>16438</ObjectId>
+      <StateNumber>734</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="20" parent="9" name="car_id_seq">
+      <ObjectId>16451</ObjectId>
+      <StateNumber>744</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="21" parent="9" name="a_car2">
+      <ObjectId>16489</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>789</StateNumber>
+    </table>
+    <table id="22" parent="9" name="a_user">
+      <ObjectId>16440</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>806</StateNumber>
+    </table>
+    <table id="23" parent="9" name="a_user2">
+      <ObjectId>16465</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>765</StateNumber>
+    </table>
+    <table id="24" parent="9" name="car">
+      <ObjectId>16453</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>807</StateNumber>
+    </table>
+    <table id="25" parent="9" name="user_car">
+      <ObjectId>16502</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>807</StateNumber>
+    </table>
+    <column id="26" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>789</StateNumber>
+      <DefaultExpression>nextval(&apos;a_car2_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="27" parent="21" name="marka">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>789</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="28" parent="21" name="nomer">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>789</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="29" parent="21" name="user_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>789</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="30" parent="21" name="a_car2__id_uindex">
+      <ObjectId>16498</ObjectId>
+      <StateNumber>790</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="31" parent="21" name="a_car2_pk">
+      <ObjectId>16496</ObjectId>
+      <StateNumber>789</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="32" parent="21" name="a_car2_pk">
+      <ObjectId>16497</ObjectId>
+      <StateNumber>789</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>a_car2_pk</UnderlyingIndexName>
+    </key>
+    <column id="33" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>734</StateNumber>
+      <DefaultExpression>nextval(&apos;a_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="34" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>734</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="35" parent="22" name="pass">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>734</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="36" parent="22" name="a_user__id_uindex">
+      <ObjectId>16449</ObjectId>
+      <StateNumber>735</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="37" parent="22" name="a_user_pk">
+      <ObjectId>16447</ObjectId>
+      <StateNumber>734</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="38" parent="22" name="a_user_pk">
+      <ObjectId>16448</ObjectId>
+      <StateNumber>734</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>a_user_pk</UnderlyingIndexName>
+    </key>
+    <column id="39" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>765</StateNumber>
+      <DefaultExpression>nextval(&apos;a_user2_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="40" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>765</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="23" name="pass">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>765</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="42" parent="23" name="car_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>770</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="43" parent="23" name="a_user2__id_uindex">
+      <ObjectId>16474</ObjectId>
+      <StateNumber>766</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="23" name="a_user2_pk">
+      <ObjectId>16472</ObjectId>
+      <StateNumber>765</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="45" parent="23" name="a_user2_pk">
+      <ObjectId>16473</ObjectId>
+      <StateNumber>765</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>a_user2_pk</UnderlyingIndexName>
+    </key>
+    <column id="46" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>744</StateNumber>
+      <DefaultExpression>nextval(&apos;car_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="47" parent="24" name="marka">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>744</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="48" parent="24" name="nomer">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>744</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="49" parent="24" name="car__id_uindex">
+      <ObjectId>16462</ObjectId>
+      <StateNumber>745</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="50" parent="24" name="car_pk">
+      <ObjectId>16460</ObjectId>
+      <StateNumber>744</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="51" parent="24" name="car_pk">
+      <ObjectId>16461</ObjectId>
+      <StateNumber>744</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>car_pk</UnderlyingIndexName>
+    </key>
+    <column id="52" parent="25" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>801</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="53" parent="25" name="car_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>801</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="54" parent="25" name="fki_u">
+      <ObjectId>16510</ObjectId>
+      <StateNumber>806</StateNumber>
+      <ColNames>user_id</ColNames>
+    </index>
+    <index id="55" parent="25" name="fki_c">
+      <ObjectId>16516</ObjectId>
+      <StateNumber>807</StateNumber>
+      <ColNames>car_id</ColNames>
+    </index>
+    <foreign-key id="56" parent="25" name="fk_u">
+      <ObjectId>16505</ObjectId>
+      <StateNumber>806</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16440</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>a_user</RefTableName>
+      <RefKeyName>a_user_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="57" parent="25" name="fk_c">
+      <ObjectId>16511</ObjectId>
+      <StateNumber>807</StateNumber>
+      <ColNames>car_id</ColNames>
+      <RefTableId>16453</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>car</RefTableName>
+      <RefKeyName>car_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

@@ -1,13 +1,11 @@
 package ru.Alex.Vil.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
 
 @Getter
 @Setter
@@ -15,8 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "car")
-
+@Table(name = "a_car2")
 
 public class Car {
     @Id
@@ -31,14 +28,9 @@ public class Car {
     private Integer nomer;
 
 
-
-
     @JsonBackReference
-    @ManyToMany(cascade = CascadeType.ALL,mappedBy = "cars")					//cars ссылка на модель User в лист.
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "cars")                    //cars ссылка на модель User в лист.
     private List<User> users = new ArrayList<>();
-
-
-
 
 }
 

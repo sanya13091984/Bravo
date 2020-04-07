@@ -6,6 +6,7 @@ import ru.Alex.Vil.models.User;
 import ru.Alex.Vil.repository.UserRepository;
 import ru.Alex.Vil.services.UserService;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -26,7 +27,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-
     @Override
     public User putUser(User user) {
         return userRepository.save(user);
@@ -38,15 +38,16 @@ public class UserServiceImpl implements UserService {
         return "udalil user" + id;
     }
 
+
     @Override
     public List<User> getSql() {
         return userRepository.prmSql();
     }
 
+    @Transactional
     @Override
     public void voidSql() {
-    userRepository.sqlUpdata();
+        userRepository.sqlUpdata();
     }
-
 
 }
